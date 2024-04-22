@@ -26,11 +26,11 @@ async function signIn() {
         @submit.prevent="signIn"
         class="flex flex-col bg-white p-8 rounded-lg shadow-lg w-96 space-y-4"
       >
-        <div>
+      <div class="flex justify-around">
           <label for="email">Email</label>
           <input id="email" v-model="email" type="email" required />
         </div>
-        <div>
+        <div class="flex justify-around">
           <label for="password">Password</label>
           <input id="password" v-model="password" type="password" required />
         </div>
