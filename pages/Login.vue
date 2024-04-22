@@ -2,8 +2,8 @@
 const client = useSupabaseClient();
 const router = useRouter();
 const email = ref('');
-const password = ref(null);
-const errorMsg = ref(null);
+const password = ref('');
+const errorMsg = ref('');
 
 async function signIn() {
   try {
@@ -22,7 +22,6 @@ async function signIn() {
 <template>
   <div class="h-screen flex">
     <div class="flex-1 flex items-center justify-center bg-gray-100">
-      <h1>Login</h1>
       <form
         @submit.prevent="signIn"
         class="flex flex-col bg-white p-8 rounded-lg shadow-lg w-96 space-y-4"
