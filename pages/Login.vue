@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import '~/assets/global.css'
+
 const client = useSupabaseClient();
 const router = useRouter();
 const email = ref('');
