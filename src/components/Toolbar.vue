@@ -25,16 +25,22 @@ async function logout() {
                 <path d="..." fill="var(--text-color)" />
                 <path d="..." fill="var(--surface-card)" />
             </svg>
-            <Button label="Files" text plain />
-            <Button label="Edit" text plain />
-            <Button label="View" text plain />
+            <Button label="Dashboard" text />
+            <Button label="Jobs" text />
+            <Button label="History" text />
         </div>
     </template>
 
     <template #end>
-        <div class="flex align-items-center gap-2">
-            <Button label="Logout" @click="logout" severity="contrast" size="small" />
+        <div class="flex align-items-center gap-2 mr-6" id="logoutButtonContainer">
+            <Button label="Logout" @click="logout" text size="small" />
         </div>
     </template>
 </Toolbar>
 </template>
+
+<style scoped>
+.logoutButtonContainer {
+  margin-right: 30px;
+}
+</style>
