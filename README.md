@@ -1,3 +1,5 @@
+![Dacuma logo](public/dacuma2_transparentBg.png)
+
 # Dacuma
 
 A customer management app, for tracking job progress and emailing progress updates.
