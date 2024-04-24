@@ -26,7 +26,8 @@ async function logout() {
     <template #center>
         <div class="flex flex-row align-items-center gap-2">
             <Button label="Dashboard" plain text />
-            <Button label="Jobs" text />
+            <Button label="List" text />
+            <Button label="Active" text />
             <Button label="History" plain text />
             <Button label="Settings" plain text />
         </div>

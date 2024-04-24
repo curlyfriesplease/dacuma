@@ -5,12 +5,23 @@ definePageMeta({
 
 import '~/assets/css/global.css'
 import Toolbar from '../src/components/Toolbar.vue';
+import Joblist from './Joblist.vue';
 
 </script>
 
 <template>
   <Toolbar />
-
-  <h1>MAIN PAGE</h1>
-
+  <div id="mainPageContentContainer">
+    <Joblist />
+  </div>
 </template>
+
+<style>
+#mainPageContentContainer {
+  padding: 3rem 3rem 1rem 3rem;
+  background-color: rgba(0, 255, 255, 0.261);
+  width: 100%;
+  height: auto;
+  border: 2rem;
+}
+</style>
