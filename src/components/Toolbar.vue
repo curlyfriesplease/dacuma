@@ -18,21 +18,22 @@ async function logout() {
 </script>
 
 <template>
-<Toolbar style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem">
+<Toolbar style="border-radius: 3rem; padding: 1rem 2rem 1rem 3rem">
     <template #start>
-        <div class="flex align-items-center gap-2">
-            <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="..." fill="var(--text-color)" />
-                <path d="..." fill="var(--surface-card)" />
-            </svg>
-            <Button label="Dashboard" text />
+        <img src="/dacuma2_transparentBg.png" alt="logo" style="height: 2rem" />
+    </template>
+    
+    <template #center>
+        <div class="flex flex-row align-items-center gap-2">
+            <Button label="Dashboard" plain text />
             <Button label="Jobs" text />
-            <Button label="History" text />
+            <Button label="History" plain text />
+            <Button label="Settings" plain text />
         </div>
     </template>
 
     <template #end>
-        <div class="flex align-items-center gap-2 mr-6" id="logoutButtonContainer">
+        <div class="gap-2 w-24" id="logoutButtonContainer">
             <Button label="Logout" @click="logout" text size="small" />
         </div>
     </template>
