@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '~/assets/global.css'
+import '~/assets/css/global.css'
 
 const client = useSupabaseClient();
 const router = useRouter();
@@ -23,10 +23,10 @@ async function signIn() {
 
 <template>
   <div class="h-screen flex">
-    <div class="flex-1 flex items-center justify-center bg-gray-100">
+    <div class="flex-1 flex items-center justify-center bg-gray-900">
       <form
         @submit.prevent="signIn"
-        class="flex flex-col bg-white p-8 rounded-lg shadow-lg w-96 space-y-4"
+        class="flex flex-col bg-gray-600 p-8 rounded-lg shadow-lg w-96 space-y-4"
       >
       <div class="flex justify-around">
           <label for="email">Email</label>

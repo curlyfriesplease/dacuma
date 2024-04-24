@@ -1,6 +1,6 @@
 <script setup>
 const user = useSupabaseUser();
-import 'primevue/resources/themes/lara-light-green/theme.css'
+import 'primevue/resources/themes/lara-dark-green/theme.css'
 </script>
 
 <template>

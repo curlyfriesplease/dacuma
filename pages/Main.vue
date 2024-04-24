@@ -3,10 +3,8 @@ definePageMeta({
   middleware: 'auth',
 });
 
-import '~/assets/global.css'
+import '~/assets/css/global.css'
 import Toolbar from '../src/components/Toolbar.vue';
-
-const user = useSupabaseUser();
 
 </script>
 

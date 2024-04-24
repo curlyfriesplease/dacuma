@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Toolbar from 'primevue/toolbar';
-import Avatar from 'primevue/avatar';
 import Button from 'primevue/button';
 
 const client = useSupabaseClient();
