@@ -4,13 +4,11 @@ definePageMeta({
 });
 
 import '~/assets/css/global.css'
-import Toolbar from '../src/components/Toolbar.vue';
 import Joblist from './Joblist.vue';
 
 </script>
 
 <template>
-  <Toolbar />
   <div id="mainPageContentContainer">
     <Joblist />
   </div>

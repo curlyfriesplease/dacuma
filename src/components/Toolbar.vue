@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import Toolbar from 'primevue/toolbar';
-import Button from 'primevue/button';
-
 const client = useSupabaseClient();
 const router = useRouter();
 
@@ -18,27 +15,27 @@ async function logout() {
 </script>
 
 <template>
-<Toolbar style="border-radius: 3rem; padding: 1rem 2rem 1rem 3rem">
+  <Toolbar style="border-radius: 3rem; padding: 1rem 2rem 1rem 3rem">
     <template #start>
-        <img src="/dacuma2_transparentBg.png" alt="logo" style="height: 2rem" />
+      <img src="/dacuma2_transparentBg.png" alt="logo" style="height: 2rem" />
     </template>
-    
+
     <template #center>
-        <div class="flex flex-row align-items-center gap-2">
-            <Button label="Dashboard" plain text />
-            <Button label="List" text />
-            <Button label="Active" text />
-            <Button label="History" plain text />
-            <Button label="Settings" plain text />
-        </div>
+      <div class="flex flex-row align-items-center gap-2">
+        <Button label="Dashboard" plain text />
+        <Button label="List" text />
+        <Button label="Active" text />
+        <Button label="History" plain text />
+        <Button label="Settings" plain text />
+      </div>
     </template>
 
     <template #end>
-        <div class="gap-2 w-24" id="logoutButtonContainer">
-            <Button label="Logout" @click="logout" text size="small" />
-        </div>
+      <div class="gap-2 w-24" id="logoutButtonContainer">
+        <Button label="Logout" @click="logout" text size="small" />
+      </div>
     </template>
-</Toolbar>
+  </Toolbar>
 </template>
 
 <style scoped>

@@ -1,12 +1,14 @@
 <script setup>
 const user = useSupabaseUser();
-import 'primevue/resources/themes/lara-dark-green/theme.css'
+import 'primevue/resources/themes/lara-dark-green/theme.css';
 </script>
 
 <template>
-  <div class="container" id='mainContainer'>
-    <NuxtPage reg="Main" v-if="user" />
-    <NuxtPage reg="Login" v-else />
+  <div class="container" id="mainContainer">
+    <NuxtLayout>
+      <NuxtPage reg="Dashboard" v-if="user" />
+      <NuxtPage reg="Login" v-else />
+    </NuxtLayout>
   </div>
 </template>
 
