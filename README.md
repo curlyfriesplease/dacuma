@@ -3,6 +3,7 @@
 # Dacuma
 
 A customer management app, for tracking job progress and emailing progress updates.
+*** THIS IS CURRENTLY A WIP AND NOT YET READY AS AN MVP ***
 
 ## Setup
 
