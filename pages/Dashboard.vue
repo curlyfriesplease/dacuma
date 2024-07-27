@@ -3,17 +3,13 @@ definePageMeta({
   middleware: 'auth',
 });
 
-import '~/assets/css/global.css'
+import '~/assets/css/global.css';
 import Toolbar from '../src/components/Toolbar.vue';
-import Joblist from './Joblist.vue';
-
 </script>
 
 <template>
   <Toolbar />
-  <div id="mainPageContentContainer">
-    <Joblist />
-  </div>
+  <div id="mainPageContentContainer">Dashboard page</div>
 </template>
 
 <style>

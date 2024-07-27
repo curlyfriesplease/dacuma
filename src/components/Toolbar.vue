@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Toolbar from 'primevue/toolbar';
 import Button from 'primevue/button';
+import ToolbarButton from './ToolbarButton.vue';
 
 const client = useSupabaseClient();
 const router = useRouter();
@@ -18,31 +19,41 @@ async function logout() {
 </script>
 
 <template>
-<Toolbar style="border-radius: 3rem; padding: 1rem 2rem 1rem 3rem">
+  <Toolbar style="border-radius: 3rem; padding: 1rem 2rem 1rem 3rem">
     <template #start>
-        <img src="/dacuma2_transparentBg.png" alt="logo" style="height: 2rem" />
+      <img src="/dacuma2_transparentBg.png" alt="logo" style="height: 2rem" />
     </template>
-    
+
     <template #center>
-        <div class="flex flex-row align-items-center gap-2">
-            <Button label="Dashboard" plain text />
-            <Button label="List" text />
-            <Button label="Active" text />
-            <Button label="History" plain text />
-            <Button label="Settings" plain text />
-        </div>
+      <div class="flex flex-row align-items-center gap-2">
+        <ToolbarButton to="/Dashboard" active-class="active-link"
+          >Dashboard</ToolbarButton
+        >
+        <ToolbarButton to="/List" active-class="active-link"
+          >List</ToolbarButton
+        >
+        <ToolbarButton to="/Active" active-class="active-link"
+          >Active</ToolbarButton
+        >
+        <ToolbarButton to="/History" active-class="active-link"
+          >History</ToolbarButton
+        >
+        <ToolbarButton to="/Settings" active-class="active-link"
+          >Settings</ToolbarButton
+        >
+      </div>
     </template>
 
     <template #end>
-        <div class="gap-2 w-24" id="logoutButtonContainer">
-            <Button label="Logout" @click="logout" text size="small" />
-        </div>
+      <div class="gap-2 w-24" id="logoutButtonContainer">
+        <Button label="Logout" @click="logout" text size="small" />
+      </div>
     </template>
-</Toolbar>
+  </Toolbar>
 </template>
 
 <style scoped>
-.logoutButtonContainer {
+#logoutButtonContainer {
   margin-right: 30px;
 }
 </style>

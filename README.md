@@ -12,3 +12,9 @@ A customer management app, for tracking job progress and emailing progress updat
    SUPABASE_URL=abcdefghijklmnopqrstuv\
    SUPABASE_KEY=abcdefghijklmnopqrstuv\
    (or, if deploying, add as env vars to the platform)
+
+## Troubleshooting
+
+# Failed to fetch at login screen
+
+Is it the case that you haven't used your Supabase DB in a while? It will have stopped, and we need waking up from the supabase site.

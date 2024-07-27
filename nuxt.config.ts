@@ -1,15 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    '@nuxtjs/supabase', 
-    '@nuxtjs/tailwindcss', 
-    'nuxt-primevue'
-  ],
+  modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', 'nuxt-primevue'],
   css: [
-    'primevue/resources/themes/lara-dark-green/theme.css', 
+    'primevue/resources/themes/lara-dark-green/theme.css',
     'primevue/resources/primevue.css',
-    '~/assets/css/tailwind.css'
+    '~/assets/css/tailwind.css',
+    '~/assets/css/global.css',
   ],
   build: {
     transpile: ['nuxt', 'primevue'],
@@ -18,11 +15,15 @@ export default defineNuxtConfig({
     usePrimeVue: true,
     cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities',
     options: {
-      inputStyle: 'filled'
+      inputStyle: 'filled',
+    },
+    components: {
+      include: ['Toolbar', 'Button'],
+    },
+    theme: 'lara-dark-green',
   },
-  components: {
-    include: ['Toolbar', 'Button']
-},
-  theme: 'lara-dark-green',
-}
+  transition: {
+    name: 'fade',
+    mode: 'out-in',
+  },
 });

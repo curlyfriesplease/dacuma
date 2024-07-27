@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '~/assets/css/global.css'
+import '~/assets/css/global.css';
 
 const client = useSupabaseClient();
 const router = useRouter();
@@ -14,7 +14,7 @@ async function signIn() {
       password: password.value,
     });
     if (error) throw error;
-    router.push('/Main');
+    router.push('/Dashboard');
   } catch (error) {
     errorMsg.value = error.message;
   }
@@ -28,7 +28,7 @@ async function signIn() {
         @submit.prevent="signIn"
         class="flex flex-col bg-gray-600 p-8 rounded-lg shadow-lg w-96 space-y-4"
       >
-      <div class="flex justify-between">
+        <div class="flex justify-between">
           <label for="email">Email</label>
           <input id="email" v-model="email" type="email" required />
         </div>
@@ -37,8 +37,8 @@ async function signIn() {
           <input id="password" v-model="password" type="password" required />
         </div>
         <button type="submit">Login</button>
+        <h1 v-if="errorMsg" class="text-red-500">{{ errorMsg }}</h1>
       </form>
-      <h1 v-if="errorMsg" class="text-red-500">{{ errorMsg }}</h1>
     </div>
   </div>
 </template>
