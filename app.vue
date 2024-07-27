@@ -21,6 +21,7 @@ import 'primevue/resources/themes/lara-dark-green/theme.css';
   width: 100vw;
   height: 100vh;
 }
+
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.8s;
