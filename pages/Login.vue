@@ -16,7 +16,7 @@ async function signIn() {
     if (error) throw error;
     router.push('/Dashboard');
   } catch (error) {
-    errorMsg.value = error.message;
+    errorMsg.value = (error as Error).message;
   }
 }
 </script>
