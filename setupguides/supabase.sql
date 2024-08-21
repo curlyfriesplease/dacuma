@@ -51,3 +51,17 @@ create policy "Users can insert their own jobs." on jobs
 
 create policy "Users can update own jobs." on jobs
   for update using ((select auth.uid()) = id);
+
+  -- Enable Row Level Security (RLS) on the changeslog table
+alter table changeslog
+  enable row level security;
+
+create policy "Changes are viewable only by authenticated users"
+on changeslog for select
+using ((select auth.uid()) = id);
+
+create policy "Users can insert their own changes." on changeslog
+  for insert with check ((select auth.uid()) = id);
+
+create policy "Users can update own changes." on changeslog
+  for update using ((select auth.uid()) = id);
