@@ -15,6 +15,10 @@ A customer management app, for tracking job progress and emailing progress updat
    SUPABASE_KEY=abcdefghijklmnopqrstuv\
    (or, if deploying, add as env vars to the platform)
 
+## Running locally
+
+Use `npm run dev` to start the app
+
 ## Troubleshooting
 
 # Failed to fetch at login screen
