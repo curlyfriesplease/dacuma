@@ -4,11 +4,9 @@ definePageMeta({
 });
 
 import '~/assets/css/global.css';
-import Toolbar from '../src/components/Toolbar.vue';
 </script>
 
 <template>
-  <Toolbar />
   <div id="mainPageContentContainer">List page</div>
 </template>
 

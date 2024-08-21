@@ -8,7 +8,6 @@ import Toolbar from '../src/components/Toolbar.vue';
 </script>
 
 <template>
-  <Toolbar />
   <div id="mainPageContentContainer">
     <Joblist />
   </div>
