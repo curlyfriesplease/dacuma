@@ -26,7 +26,7 @@ create table jobs (
   status5timestamp timestamp with time zone,
   status6timestamp timestamp with time zone,
   status7timestamp timestamp with time zone,
-  updated_at timestamp with time zone,
+  updated_at timestamp with time zone
 );
 
 create table changeslog (
