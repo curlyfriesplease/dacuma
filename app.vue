@@ -6,12 +6,11 @@ import 'primevue/resources/themes/lara-dark-green/theme.css';
 <template>
   <div class="container" id="mainContainer">
     <NuxtLoadingIndicator />
-    <transition name="fade">
-      <NuxtLayout>
-        <NuxtPage reg="Dashboard" v-if="user" />
-        <NuxtPage reg="Login" v-else />
-      </NuxtLayout>
-    </transition>
+
+    <NuxtLayout>
+      <NuxtPage reg="Dashboard" v-if="user" />
+      <NuxtPage reg="Login" v-else />
+    </NuxtLayout>
   </div>
 </template>
 

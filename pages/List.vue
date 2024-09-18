@@ -1,10 +1,11 @@
-<script>
+<script setup>
+import { ref, onMounted } from 'vue';
+import '~/assets/css/global.css';
+import { getListData } from '~/services/getList';
+
 definePageMeta({
   middleware: 'auth',
 });
-
-import '~/assets/css/global.css';
-import { getListData } from '~/services/getList';
 
 const allJobs = ref([]);
 console.log('🔥 allJobs:', allJobs);
