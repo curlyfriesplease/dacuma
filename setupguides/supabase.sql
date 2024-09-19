@@ -19,6 +19,7 @@ create table jobs (
   flagred boolean,
   flagyellow boolean,
   flaggreen boolean,
+  status numeric,
   status1timestamp timestamp with time zone,
   status2timestamp timestamp with time zone,
   status3timestamp timestamp with time zone,
@@ -33,7 +34,7 @@ create table changeslog (
   id uuid references auth.users not null primary key,
   changetimestamp timestamp with time zone,
   jobid uuid references jobs,
-  status text,
+  status numeric,
   description text
 );
 
