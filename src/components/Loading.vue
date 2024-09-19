@@ -1,7 +1,7 @@
 <template>
   <div class="loading-spinner">
     <div class="spinner"></div>
-    <p v-if="message">{{ message }}</p>
+    <p v-if="message" class="loading-message">{{ message }}</p>
   </div>
 </template>
 
@@ -29,6 +29,13 @@ defineProps({
   border-top: 3px solid #3498db;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+}
+
+.loading-message {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
 }
 
 @keyframes spin {

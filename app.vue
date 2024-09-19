@@ -23,7 +23,7 @@ import 'primevue/resources/themes/lara-dark-green/theme.css';
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.8s;
+  transition: all 0.4s;
 }
 .fade-enter,
 .fade-leave-to {

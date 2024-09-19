@@ -30,16 +30,26 @@ const getFlagIcons = computed(
       :value="props.orders"
       sortField="quoteref"
       :sortOrder="-1"
-      tableStyle="min-width: 50rem"
       paginator
+      :alwaysShowPaginator="false"
       :rows="25"
+      selectionMode="single"
+      rowHover
+      removableSort
+      class="rounded-table"
     >
       <Column field="quoteref" header="Ref" sortable></Column>
       <Column header="Status" sortable>
         <template #body="slotProps">
           <Tag
             :value="getStatus(slotProps.data.status)?.name ?? 'Unknown'"
-            :severity="getStatus(slotProps.data.status)?.severity ?? 'Warn'"
+            :class="[
+              'custom-severity',
+              `severity-${
+                getStatus(slotProps.data.status)?.severity.toLowerCase() ??
+                'warn'
+              }`,
+            ]"
           />
         </template>
       </Column>
@@ -56,4 +66,40 @@ const getFlagIcons = computed(
   </div>
 </template>
 
-// TODO: Next find a way to get orders passed into this
+<style scoped>
+.rounded-table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.custom-severity {
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+}
+
+.severity-info {
+  background-color: #add6ff;
+  color: #2d3748;
+}
+
+.severity-progress {
+  background-color: #92d489;
+  color: #0f141d;
+}
+
+.severity-warn {
+  background-color: #fefcbf;
+  color: #744210;
+}
+
+.severity-success {
+  background-color: #e797e3;
+  color: #163326;
+}
+
+.severity-danger {
+  background-color: #fed7d7;
+  color: #822727;
+}
+</style>

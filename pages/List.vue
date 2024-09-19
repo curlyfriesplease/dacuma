@@ -27,8 +27,19 @@ onMounted(async () => {
 
 <template>
   <div id="listPageContentContainer">
-    <Loading v-if="isLoading" message="Loading jobs..." />
-    <ListTable :orders="allJobs" />
-    <pre>{{ allJobs }}</pre>
+    <div v-if="isLoading" id="listPageLoadingContainer">
+      <Loading message="Loading jobs..." />
+    </div>
+
+    <ListTable v-else :orders="allJobs" />
   </div>
 </template>
+
+<style scoped>
+#listPageLoadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+</style>

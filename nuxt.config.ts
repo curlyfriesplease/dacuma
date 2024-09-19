@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', 'nuxt-primevue'],
   css: [
-    'primevue/resources/themes/lara-dark-green/theme.css',
+    'primevue/resources/themes/aura-dark-green/theme.css',
     'primevue/resources/primevue.css',
     'primeicons/primeicons.css',
     '~/assets/css/tailwind.css',
