@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   css: [
     'primevue/resources/themes/lara-dark-green/theme.css',
     'primevue/resources/primevue.css',
+    'primeicons/primeicons.css',
     '~/assets/css/tailwind.css',
     '~/assets/css/global.css',
   ],
@@ -20,10 +21,11 @@ export default defineNuxtConfig({
     components: {
       include: ['Toolbar', 'Button'],
     },
-    theme: 'lara-dark-green',
   },
-  transition: {
-    name: 'fade',
-    mode: 'out-in',
+  app: {
+    pageTransition: {
+      name: 'fade',
+      mode: 'out-in',
+    },
   },
 });
