@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { useAsyncData, useRoute } from '#app';
 import '~/assets/css/global.css';
 import { getListData } from '~/services/getList';
 import Loading from '~/src/components/Loading.vue';
@@ -8,21 +8,33 @@ import ListTable from '~/src/components/list/ListTable.vue';
 definePageMeta({
   middleware: 'auth',
 });
+const route = useRoute();
 
-const allJobs = ref([]);
-const isLoading = ref(true);
-console.log('🔥 allJobs:', allJobs);
-
-onMounted(async () => {
-  try {
+const {
+  data: allJobs,
+  pending: isLoading,
+  refresh,
+} = await useAsyncData(
+  'jobs',
+  async () => {
     console.log('🕗 Fetching all jobs...');
-    allJobs.value = await getListData();
-  } catch (error) {
-    console.error('🤢 Error fetching all jobs:', error);
-  } finally {
-    isLoading.value = false;
+    try {
+      return await getListData();
+    } catch (error) {
+      console.error('🤢 Error fetching all jobs:', error);
+      return [];
+    }
+  },
+  {
+    watch: [() => route.fullPath],
   }
-});
+);
+
+// TODO: Add refresh button
+// Function to manually refresh data
+// const refreshJobs = () => {
+//   refresh();
+// };
 </script>
 
 <template>

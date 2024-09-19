@@ -8,6 +8,7 @@ const activeCustomer = useState('activeCustomer');
 </script>
 
 <template>
-  <div id="activePageContentContainer">Active page</div>
-  <pre>{{ activeCustomer }}</pre>
+  <div id="activePageContentContainer">
+    <pre>{{ activeCustomer }}</pre>
+  </div>
 </template>
