@@ -4,6 +4,10 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import Tag from 'primevue/tag';
 import getStatus from '../../utils/statuses';
+import { useRouter } from 'vue-router';
+
+const activeCustomer = useState('activeCustomer');
+const router = useRouter();
 
 const props = defineProps({
   orders: Array,
@@ -22,6 +26,11 @@ const getFlagIcons = computed(
       return icons.join(' ');
     }
 );
+
+const onRowSelect = (event: { data: any }) => {
+  activeCustomer.value = event.data;
+  router.push(`/active`);
+};
 </script>
 
 <template>
@@ -37,6 +46,7 @@ const getFlagIcons = computed(
       rowHover
       removableSort
       class="rounded-table"
+      @row-select="onRowSelect"
     >
       <Column field="quoteref" header="Ref" sortable></Column>
       <Column header="Status" sortable>

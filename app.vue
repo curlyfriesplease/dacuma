@@ -1,6 +1,9 @@
 <script setup>
-const user = useSupabaseUser();
 import 'primevue/resources/themes/lara-dark-green/theme.css';
+
+const user = useSupabaseUser();
+
+const activeCustomer = useState('activeCustomer', () => null);
 </script>
 
 <template>
