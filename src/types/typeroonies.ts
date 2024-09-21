@@ -1,0 +1,30 @@
+export interface Customer {
+  id?: string; // UUID
+  jobid?: string; // UUID
+  quoteref?: string | null;
+  jobisopen?: boolean | null;
+  customername?: string | null;
+  customeremail?: string | null;
+  customerphone?: string | null;
+  itemdescription?: string | null;
+  workdescription?: string | null;
+  category?: string | null;
+  quotedprice?: number | null;
+  partscost?: number | null;
+  finalprice?: number | null;
+  notes?: string | null;
+  timeestimate?: number | null;
+  totaltime?: number | null;
+  flagred?: boolean | null;
+  flagyellow?: boolean | null;
+  flaggreen?: boolean | null;
+  status?: number | null;
+  status1timestamp?: Date | null;
+  status2timestamp?: Date | null;
+  status3timestamp?: Date | null;
+  status4timestamp?: Date | null;
+  status5timestamp?: Date | null;
+  status6timestamp?: Date | null;
+  status7timestamp?: Date | null;
+  updated_at?: Date | null;
+}
