@@ -19,6 +19,7 @@ export interface Customer {
   flagyellow?: boolean | null;
   flaggreen?: boolean | null;
   status?: number | null;
+  includeinstats?: boolean | null;
   status1timestamp?: Date | null;
   status2timestamp?: Date | null;
   status3timestamp?: Date | null;
