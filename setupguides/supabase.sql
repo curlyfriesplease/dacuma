@@ -20,6 +20,7 @@ create table jobs (
   flagyellow boolean,
   flaggreen boolean,
   status numeric,
+  includeinstats boolean,
   status1timestamp timestamp with time zone,
   status2timestamp timestamp with time zone,
   status3timestamp timestamp with time zone,

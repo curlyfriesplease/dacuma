@@ -18,6 +18,7 @@ export interface Job {
   flagred?: boolean | null;
   flagyellow?: boolean | null;
   flaggreen?: boolean | null;
+  includeinstats?: boolean | null;
   status1timestamp?: string | null; // timestamp with time zone
   status2timestamp?: string | null; // timestamp with time zone
   status3timestamp?: string | null; // timestamp with time zone
