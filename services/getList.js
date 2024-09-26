@@ -1,6 +1,6 @@
-// import * as supabaseClient from '../plugins/supabaseClient';
+import { supabaseClient } from './supabaseClient';
+
 export const getListData = async () => {
-  const supabaseClient = useSupabaseClient();
   console.log('getListData called');
   const { data, error } = await supabaseClient.from('jobs').select('*');
   if (error) throw error;

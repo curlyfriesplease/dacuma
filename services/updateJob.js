@@ -1,11 +1,10 @@
 import { supabaseClient } from './supabaseClient';
 
-export const fetchOrderById = async (id) => {
+export const updateJob = async (id, updatedData) => {
   const { data, error } = await supabaseClient
     .from('jobs')
-    .select('*')
-    .eq('id', id)
-    .single();
+    .update(updatedData)
+    .eq('id', id);
 
   if (error) {
     throw error;
